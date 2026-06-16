@@ -9,10 +9,11 @@ A vectorized implementation of Simple Linear Regression built from scratch using
 
 - **Hypothesis (Prediction):** $$\hat{y} = w \cdot x + b$$
 
-- **Cost Function (Mean Squared Error):** $$L = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2$$
+- **Cost Function (Mean Squared Error):** $$L = \frac{1}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)^2$$
 
-- **Gradients Calculation:** $$\frac{\partial L}{\partial w} = \frac{1}{n} \sum -2x(y - \hat{y})$$  
-  $$\frac{\partial L}{\partial b} = \frac{1}{n} \sum -2(y - \hat{y})$$
+- **Gradients Calculation:** $$\frac{\partial L}{\partial w} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i) \cdot x_i$$
+  
+  $$\frac{\partial L}{\partial b} = \frac{2}{n} \sum_{i=1}^{n} (\hat{y}_i - y_i)$$
 
 ## Project Structure
 
